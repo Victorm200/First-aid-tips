@@ -1,11 +1,14 @@
+// Toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
 
-// Toggle tip visibility when title is clicked
+// Toggle tip content visibility
 const titles = document.querySelectorAll(".tip-title");
 
 titles.forEach(title => {
   title.addEventListener("click", () => {
     const content = title.nextElementSibling;
-    const isVisible = content.style.display === "block";
-    content.style.display = isVisible ? "none" : "block";
+    content.classList.toggle("show");
   });
 });
