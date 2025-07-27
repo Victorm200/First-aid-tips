@@ -1,202 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quick first aid tips for emergencies like CPR, burns, choking, and more. Created by Victor Mwaniki." />
   <title>First Aid Tips</title>
-  
   <style>
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
-      background-color: #fafafa;
-      margin: 20px;
+      background-color: #f2f2f2;
       color: #333;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.5s, color 0.5s;
     }
 
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    /* Header */
     h1 {
       text-align: center;
-      color: #d00000;
+      animation: fadeIn 2s ease;
     }
 
-    .tips-container {
-      padding: 10px;
-    }
-
-    .tip {.tip 
-  background: #fff;
-  border-left: 5px solid #d00000;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  animation: fadeInUp 0.6s ease both;
-    );
-    }
-
-    .tip-title {
-      margin-top: 0;
-      color: #d00000;
-    }
-
-    .tip-content p {
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    .contacts {
-      margin-top: 30px;
-      background: #fff5f5;
+    /* First aid tip container */
+    .tip {
+      background: #fff;
       padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin: 15px 0;
+      border-left: 5px solid #2c7be5;
+      border-radius: 8px;
+      animation: slideIn 1s ease;
+      transition: background 0.5s;
     }
 
-    .contacts h2 {
-      color: #d00000;
+    body.dark-mode .tip {
+      background: #1e1e1e;
+      border-color: #90caf9;
     }
 
-    .contacts ul {
-      list-style: none;
-      padding: 0;
+    /* Toggle Button */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      background: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
-    .contacts li {
-      padding: 5px 0;
+    .toggle-btn:hover {
+      background: #1a5bb8;
     }
 
-    footer {
-      margin-top: 30px;
-      padding: 10px;
-      text-align: center;
-      color: #333;
-      font-size: 14px;
-      background: #f2f2f2;
-      border-radius: 10px;
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>⛑️ Quick First Aid Tips</h1>
+  <!-- Dark Mode Toggle Button -->
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-  <div class="tips-container">
+  <!-- Page Title -->
+  <h1>First Aid Tips</h1>
 
-    <div class="tip">
-      <h2 class="tip-title">🫀 CPR</h2>
-      <div class="tip-content">
-        <p>1. Check responsiveness.<br>
-           2. Call for help.<br>
-           3. Start chest compressions – 100–120 per minute.<br>
-           4. Give rescue breaths if trained.</p>
-      </div>
-    </div>
+  <!-- Tips Section -->
+  <div class="tip">Check for responsiveness before giving any help.</div>
+  <div class="tip">Call emergency services if the person is unresponsive.</div>
+  <div class="tip">If not breathing, begin CPR immediately.</div>
+  <div class="tip">Stop bleeding with pressure using a clean cloth.</div>
+  <div class="tip">Treat for shock by keeping the person warm and calm.</div>
 
-    <div class="tip">
-      <h2 class="tip-title">🔥 Burns</h2>
-      <div class="tip-content">
-        <p>1. Cool the burn with running water for 10–20 minutes.<br>
-           2. Cover with a clean, non-stick cloth.<br>
-           3. Don’t apply oil or cream.<br>
-           4. Call for medical help if severe.</p>
-      </div>
-    </div>
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
-    <div class="tip">
-      <h2 class="tip-title">🩸 Bleeding</h2>
-      <div class="tip-content">
-        <p>1. Apply pressure with cloth.<br>
-           2. Keep injured part raised.<br>
-           3. Don't remove soaked cloth – add more layers.<br>
-           4. Call emergency services.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">🐍 Snake Bite</h2>
-      <div class="tip-content">
-        <p>1. Keep the person calm and still to slow the spread of venom.<br>
-           2. Do NOT suck the wound or cut it.<br>
-           3. Keep the bite area below heart level.<br>
-           4. Remove tight items like jewelry near the bite.<br>
-           5. Take the person to a hospital immediately.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">😮‍💨 Choking</h2>
-      <div class="tip-content">
-        <p>1. Ask if they can speak.<br>
-           2. Give 5 back blows between shoulder blades.<br>
-           3. Follow with 5 abdominal thrusts.<br>
-           4. Repeat if needed.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">👃 Nosebleeds</h2>
-      <div class="tip-content">
-        <p>1. Sit upright and lean slightly forward.<br>
-           2. Pinch the nose just below the bridge for 10 minutes.<br>
-           3. Breathe through the mouth.<br>
-           4. Avoid lying down or tilting head back.<br>
-           5. Seek help if bleeding lasts more than 20 minutes.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">😵 Fainting</h2>
-      <div class="tip-content">
-        <p>1. Help the person lie down and raise their legs.<br>
-           2. Loosen tight clothing.<br>
-           3. Make sure they get fresh air.<br>
-           4. If unconscious for more than 1 minute, call help.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">💔 Heart Attack</h2>
-      <div class="tip-content">
-        <p>1. Call emergency services immediately.<br>
-           2. Help the person sit and stay calm.<br>
-           3. Loosen tight clothing.<br>
-           4. If trained, give CPR if the person becomes unresponsive.<br>
-           5. Don’t let them eat or drink anything.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">⚡ Electric Shock</h2>
-      <div class="tip-content">
-        <p>1. Do NOT touch the person until the power source is off.<br>
-           2. Call emergency services immediately.<br>
-           3. Check for breathing and pulse.<br>
-           4. Start CPR if needed and trained.<br>
-           5. Treat visible burns carefully.</p>
-      </div>
-    </div>
-
-    <div class="tip">
-      <h2 class="tip-title">🤢 Poisoning</h2>
-      <div class="tip-content">
-        <p>1. Do NOT make the person vomit unless told by medical staff.<br>
-           2. Check the label of the substance if available.<br>
-           3. Move them to fresh air if inhaled poison.<br>
-           4. Call emergency services or poison control.<br>
-           5. Keep the person calm and still.</p>
-      </div>
-    </div>
-
-  </div> 
+</body>
+</html>
