@@ -1,3 +1,59 @@
-index.html
-style.css
-script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Aid Tips</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>⛑️ Quick First Aid Tips</h1>
+  <div class="tip">
+    <h2>🫀 CPR</h2>
+    <p>1. Check responsiveness.<br>
+       2. Call for help.<br>
+       3. Start chest compressions – 100–120 per minute.<br>
+       4. Give rescue breaths if trained.</p>
+  </div>
+
+  <div class="tip">
+    <h2>🩸 Bleeding</h2>
+    <p>1. Apply pressure with cloth.<br>
+       2. Keep injured part raised.<br>
+       3. Don’t remove soaked cloth – add more layers.<br>
+       4. Call emergency services.</p>
+  </div>
+
+  <div class="tip">
+    <h2>😮‍💨 Choking</h2>
+    <p>1. Ask if they can speak.<br>
+       2. Give 5 back blows between shoulder blades.<br>
+       3. Follow with 5 abdominal thrusts.<br>
+       4. Repeat if needed.</p>
+  </div>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #c0392b;
+}
+
+.tip {
+  background: #fff;
+  border-left: 5px solid #e74c3c;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tip h2 {
+  margin-top: 0;
+}
